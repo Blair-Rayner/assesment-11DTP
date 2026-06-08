@@ -3,7 +3,7 @@
 import sqlite3 
 
 #constants and variables
-DATABASE = '/Users/blairrayner/Downloads/assesment.db'
+DATABASE = 'assesment.db'
 
 
 #functions
