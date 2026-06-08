@@ -1,9 +1,9 @@
-#docstring - Blair Rayner - assesment database application
+#docstring - Blair Rayner - cyclists database application
 #imports
 import sqlite3 
 
 #constants and variables
-DATABASE = '/Users/blairrayner/Downloads/assesment.db'
+DATABASE = '/Users/blairrayner/Downloads/cyclists.db'
 
 
 #functions
@@ -11,7 +11,7 @@ def print_all_cyclists():
     '''print all cyclists'''
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    sql = "SELECT * FROM assesment;"
+    sql = "SELECT * FROM cyclists;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through results
@@ -25,7 +25,7 @@ def print_cyclists_by_top_speed():
     '''print cyclists ordered by top speed'''
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    sql = "SELECT * FROM assesment ORDER BY top_speed DESC;"
+    sql = "SELECT * FROM cyclists ORDER BY top_speed DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through results
@@ -39,7 +39,7 @@ def print_cyclists_by_average_speed():
     '''print cyclists ordered by average speed'''
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    sql = "SELECT * FROM assesment ORDER BY avg_speed DESC;"
+    sql = "SELECT * FROM cyclists ORDER BY avg_speed DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through results
@@ -53,7 +53,7 @@ def print_cyclists_by_nationality():
     '''print cyclists ordered by nationality'''
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    sql = "SELECT * FROM assesment ORDER BY nationality ASC, top_speed DESC;"
+    sql = "SELECT * FROM cyclists ORDER BY nationality ASC, top_speed DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through results
@@ -67,7 +67,7 @@ def print_cyclists_alphabetically():
     '''print cyclists ordered alphabetically'''
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    sql = "SELECT * FROM assesment ORDER BY rider_name ASC;"
+    sql = "SELECT * FROM cyclists ORDER BY rider_name ASC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through results
@@ -81,7 +81,7 @@ def print_cyclists_by_team():
     '''print cyclists ordered by team'''
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    sql = "SELECT * FROM assesment ORDER BY team ASC, top_speed DESC;"
+    sql = "SELECT * FROM cyclists ORDER BY team ASC, top_speed DESC;"
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through results
