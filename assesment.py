@@ -110,4 +110,4 @@ while True:
         print("Exiting program...")
         break
     else:
-        print("Invalid input, please try again.")
+        print("Invalid input, please try again. ")
